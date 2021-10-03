@@ -307,6 +307,7 @@ button img{
 }
 
 #action-content .help{
+  margin-top: 5px;
   text-decoration: underline;
 }
 
