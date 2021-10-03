@@ -196,6 +196,7 @@
         </div>
       </div>
       <div class = "about-content" id = "about">
+        <img id = "about-img" src="img/aboutSloth.png" alt="">
         <h2 id = "about-title">About the Sloth</h2>
         <p id = "conservation-status">Conservation status:<br>Did you know? </p>
         <p id = "about-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -265,107 +266,127 @@
     var about = document.getElementById("about");
     var conservationStatus = document.getElementById("conservation-status");
     var didYouKnow = document.getElementById("did-you-know");
+    var img = document.getElementById("about-img");
+
     if(soundArray.length>0){
       var toDisplay = soundArray[soundArray.length-1];
       about.style.display = "block";
       if(toDisplay == "harpyEagle"){
+        img.src="img/aboutHarpyEagle.png";
         title.innerHTML = "About the Harpy Eagle";
         conservationStatus.innerHTML = "Conservation Status: Near Threatened<br>"
         info.innerHTML = "Harpy Eagles are the largest and most powerful raptors in the world, inhabiting tropical rainforests in the canopy layer. Harpy Eagles are carnivores and mainly prey on tree-dwelling mammals such as sloths, monkeys, and opossums. In recent years, this species is declining moderately due to hunting and habitat loss.<br>";
         didYouKnow.innerHTML = "Did you know? Harpy Eagles can grow over 1 meter long and reach a wingspan of 7.5 feet!";
       }else if(toDisplay == "sloth"){
+        img.src="img/aboutSloth.png";
         title.innerHTML = "About the Sloth";
         conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
         info.innerHTML = "Sloths are sluggish tree-dwellers of Central and South America, moving around 40 years per day through the canopy layer of tropical rainforests. Sloths have long arms, shaggy fur, and rounded heads with small ears. They are herbivores who mainly consume leaves, twigs, and occasionally fruits. ";
         didYouKnow.innerHTML = "Did you know? Sloths spend around 15 to 18 hours of their day sleeping upside down!";
       }else if(toDisplay == "anteater"){
+        img.src="img/aboutAnteater.png";
         title.innerHTML = "About the Anteater";
         conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
         info.innerHTML = "Anteaters are large, insectivorous mammals native to South and Central America. They can be identified by their long snout and sticky 2-foot-long tongue used to snag over 35,000 ants and termites every day. Anteaters are slowly disappearing due to habitat destruction and road kills, and are already considered extinct in areas of Belize, Costa Rica, Guatemala, and Uruguay.";
         didYouKnow.innerHTML = "Did you know? Anteaters have the lowest body temperature of any mammal, at 32.7° Celsius (90.9°Fahrenheit)!";
       }else if(toDisplay == "pinkRiverDolphin"){
-        title.innerHTML = "About the Sloth";
+        img.src="img/aboutPinkRiverDolphin.png";
+        title.innerHTML = "About the Pink River Dolphin";
         conservationStatus.innerHTML = "Conservation Status: Not Extinct<br>"
         info.innerHTML = "Pink river dolphins are the largest freshwater dolphin species, found primarily in the Amazon rivers of South America. These dolphins are born gray and slowly turn pink as they age and their color is influenced by their behavior, diet, and exposure to sunlight. Pink river dolphins can be threatened by water contamination, which can occur through the pollution of toxic chemicals from plastics or oil spills into the Amazon rivers.";
         didYouKnow.innerHTML = "Did you know? Pink river dolphins are impressively agile and can turn their heads 180 degrees!";
       }else if(toDisplay == "giantRiverOtter"){
-        title.innerHTML = "About the Sloth";
+        img.src="img/aboutGiantRiverOtter.png";
+        title.innerHTML = "About the Giant River Otter";
         conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
         info.innerHTML = "Giant river otters are north-central South American carnivorous mammals that mostly live along the Amazon River and in the Pantanal. They have long, narrow bodies, and long sensitive whiskers to help them feel the vibrations of their prey. These otters are a top predator in aquatic systems, controlling prey species population sizes to keep the ecosystem in balance. Giant river otters were listed as endangered in 1999 due to demand for its fur, poaching, and habitat description.";
         didYouKnow.innerHTML = "Did you know? Giant otters are excellent swimmers due to their webbed feet and flattened tail, allowing them to swim up to 9 miles per hour!";
       }
       else if(toDisplay == "greenIguana"){
-        title.innerHTML = "About the Sloth";
+        img.src="img/aboutGreenIguana.png";
+        title.innerHTML = "About the Green Iguana";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Green iguanas are the largest lizards in the Americas, extending from southern Mexico to central Brazil. They are primarily herbivores, feeding on leaves, flowers, and fruit. Green iguanas are quite common in the wild, but can face threats from habitat degradation by human development and invasive species.";
         didYouKnow.innerHTML = "Did you know? Green iguanas are able to hold their breath for up to 30 minutes!";
       }
       else if(toDisplay == "zebra"){
+        img.src="img/aboutZebra.png";
         title.innerHTML = "About the Zebra";
         conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
         info.innerHTML = "Zebras are short, stocky animals that live in treeless grasslands and woodlands of eastern and southern Africa. They primarily eat Bermuda grass, and have stripes that work as camouflage by breaking up the outline of the body. Its population is threatened by habitat loss and agricultural practices.<br>";
         didYouKnow.innerHTML = "Did you know? Each zebra has its own unique pattern of stripes, just like human fingerprints!";
       }
       else if(toDisplay == "thomsonsGazelle"){
+        img.src="img/aboutThomsonsGazelle.png";
         title.innerHTML = "About the Thomson's Gazelle";
         conservationStatus.innerHTML = "Conservation Status: Near Threatened<br>"
         info.innerHTML = "Thomson’s gazelles are small gazelles with light-brown coats and dark stripes running down their sides. They are found on dry, grassy plains and are fast sprinters that can reach speeds of 40 miles an hour. Thomson’s gazelles primarily feed on grass, but occasionally also consume seeds and shrubs.<br>";
         didYouKnow.innerHTML = "Did you know? Thomson's gazelles are able to shrink oxygen-demanding organs like the heart and liver!";
       }
       else if(toDisplay == "impala"){
+        img.src="img/aboutImpala.png";
         title.innerHTML = "About the Impala";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Impalas are medium-sized antelopes that roam the grasslands and savannas of eastern and southern Africa. They are herbivores, and their diet mainly consists of bark, leaves, wood, and stems. Impalas also move together in herds to prevent predators from striking, by leaping and scattering in all directions when being attacked to confuse the predator.<br>";
         didYouKnow.innerHTML = "Did you know? The name ‘Impala’ comes from the Zulu language meaning ‘gazelle’!";
       }
       else if(toDisplay == "blueWildebeest"){
+        img.src="img/aboutBlueWildebeest.png";
         title.innerHTML = "About the Blue Wildebeest";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Blue wildebeests are large African antelopes closely related to cattle, with curved horns and striped bodies. They inhabit grassy plains and open woodlands of Africa, and travel in large herds that graze constantly.<br>";
         didYouKnow.innerHTML = "Did you know? Blue wildebeests can run up to 40 mph, an amazing speed!";
       }
       else if(toDisplay == "southernGroundHornbill"){
+        img.src="img/aboutSouthernGroundHornbill.png";
         title.innerHTML = "About the Southern Ground Hornbill";
         conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
         info.innerHTML = "Southern ground hornbills are the largest species of hornbill, growing to around the size of a turkey. They can fly up to 18 miles an hour and hold an impressive wingspan of nearly 4 feet. Southern ground hornbills can be spotted by their jet-black feathers, yellow eyes, and bright red throat.<br>";
         didYouKnow.innerHTML = "Did you know? Southern ground hornbills spend about 70% of their day on the ground, foraging for food!";
       }
       else if(toDisplay == "waterbuck"){
+        img.src="img/aboutWaterbuck.png";
         title.innerHTML = "About the Waterbuck";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Waterbucks are large animals with long hair and a brown-gray coat, primarily located in sub-Saharan Africa. Waterbucks are also excellent swimmers who often enter the water to escape from predators, and herbivores that feed on a variety of grasses. Waterbuck populations have been declining due to poaching and human settlements, as well as heavy metal poisoning in the Lake Nakuru National Park.<br>";
         didYouKnow.innerHTML = "Did you know? Female waterbuck communicate with their calves by bleating or snorting!";
       }else if(toDisplay == "floridaPanther"){
+        img.src="img/aboutFloridaPanther.png";
         title.innerHTML = "About the Florida Panther";
         conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
         info.innerHTML = "Florida Panthers are a type of puma that live in the forests and swamps of South Florida. They are strictly carnivores with 90% of their diet consisting of feral hog, white-tailed deer, raccoon, and armadillo. Today, there are only around 120 to 130 Florida panthers left in the wild, mainly found in the Everglades National Park and Big Cypress National Preserve.<br>";
         didYouKnow.innerHTML = "Did you know? Florida panthers can leap more than 4 m (15 ft.)!";
       }
       else if(toDisplay == "americanAlligator"){
+        img.src="img/aboutAmericanAlligator.png";
         title.innerHTML = "About the American Alligator";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "American alligators are reptiles found in freshwater and slow-moving rivers. Their bodies can only tolerate salt water for brief periods of time, as they lack salt glands. American alligators populations reached all-time lows in the 1950s due to hunting and habitat loss, but since then have steadily increased.<br>";
         didYouKnow.innerHTML = "Did you know? American alligators are the largest reptile in North America!";
       }
       else if(toDisplay == "manatee"){
+        img.src="img/aboutManatee.png";
         title.innerHTML = "About the Manatee";
         conservationStatus.innerHTML = "Conservation Status: Threatened<br>"
         info.innerHTML = "Manatees are large marine animals with a rounded head, flippers, and a flat tail. They are the ocean’s largest aquatic herbivores, spending up to 8 hours a day grazing on seagrasses and other aquatic plants. Manatees have been extensively hunted by humans for their meat, fat, and tough hides, causing a drastic decrease in population.<br>";
         didYouKnow.innerHTML = "Did you know? Manatees are more closely related to the elephant than they are to other marine creatures!";
       }
       else if(toDisplay == "woodStork"){
+        img.src="img/aboutWoodStork.png";
         title.innerHTML = "About the Wood Stork";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Wood Storks are large, long-legged birds that grow to 45 inches tall with a wingspan of 65 inches. They live in a variety of wetlands and are the only stork species found in North America. Wood Storks are threatened by a loss of feeding habitat and changing water levels caused by levees, canals, and floodgates.<br>";
         didYouKnow.innerHTML = "Did you know? Wood Storks have been known to fly as high as 6000 feet!";
       }
       else if(toDisplay == "greatEgret"){
+        img.src="img/aboutGreatEgret.png";
         title.innerHTML = "About the Great Egret";
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Great egrets are tall birds found in shallow North American wetlands, who mainly consume a diet of fish. In the past, white feathers of great egrets were used for the decoration of hats, which led to a decline in their population. However, this practice was banned at the end of the 19th century, leading to a large and stable population of great egrets today.<br>";
         didYouKnow.innerHTML = "Did you know? Great egrets curve their necks into a “S” shape when flying!";
       }
       else if(toDisplay == "marshRabbit"){
+        img.src="img/aboutMarshRabbit.png";
         title.innerHTML = "About the Marsh Rabbit";
         conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
         info.innerHTML = "Marsh rabbits are small cottontail rabbits found in the marshes and swamps of coastal regions of the Eastern and Southern United States. They can be identified by their short, rounded ears and dark brown fur. Marsh rabbits were listed as federally endangered in 1990 due to threats of habitat loss and degradation, predation by cats, and mortality from vehicles.<br>";
@@ -452,9 +473,11 @@
     var closeButton = document.getElementById("close");
     var complete = document.getElementById("complete-bar");
     var bar = document.getElementById("top-bar");
+    var action = document.getElementById("action-content");
 
     if(!closeButton.classList.contains("hidden")){
       content.style.display = "none";
+      action.style.display = "none";
       buttons.style.display = "none";
       closeButton.innerHTML = "+";
       buttons.classList.remove("play");
@@ -463,6 +486,7 @@
       bar.classList.add("top-border");
     }else{
       content.style.display = "inline";
+      action.style.display = "block";
       buttons.style.display = "flex";
       closeButton.innerHTML = "–";
       closeButton.classList.remove("hidden");
