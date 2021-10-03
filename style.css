@@ -70,19 +70,20 @@ video {
 }
 
 #logo{
-  font-family: "Soleil Semibold";
-  position: fixed;
-  top: 0px;
-  left: 45%;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-family: "Soleil Regular";
+  font-size: 28px;
   color: white;
 }
 
 h1{
   color: white;
   font-family: "Soleil Book";
-  font-size:  30px;
+  font-size:  28px;
   padding: 0;
-  margin: 0;
+  margin-top: 15px;
+  margin-bottom: -5px;
 }
 
 h2{
@@ -106,10 +107,12 @@ a{
 
 button {
   position:relative;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   background: white;
   cursor: pointer;
+  background: none ;
+  box-shadow:inset 0px 0px 0px 2px #198D9C;
   border-radius: 5px;
   border: none;
 }
@@ -119,6 +122,16 @@ button img{
   position:absolute;
   top: 17%;
   left: 8%;
+}
+
+#complete-bar{
+  position: fixed;
+  width: 390px;
+  background-color: #2A314E;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  border-right: 12px solid #49B5C3;
 }
 
 .choose-bar{
@@ -143,6 +156,12 @@ button img{
 
 .hidden{
   margin-top: 12px;
+}
+
+.content{
+  position: fixed;
+  max-height: 75%;
+  overflow-y: scroll;
 }
 
 .choose-bar button{
@@ -170,34 +189,29 @@ button img{
   color: white;
   width:  auto;
   height: auto;
-  padding: 18px 23px;
+  padding: 10px 15px;
   font-size: 23px;
-  background: #1A181C;
+  background: none;
+  box-shadow:inset 0px 0px 0px 2px #49B5C3 ;
   opacity: 0.9;
 }
 
 .main-content {
   position: relative;
   border-radius: 7px;
-  background: #1A181C;
-  opacity: 0.9;
   color: black;
   width:  350px;
-  padding: 45px 30px;
 }
 
 .about-content{
   display:  none;
-  position: fixed;
-  bottom: 40px;
-  left:  440px;
+  position: relative;
   border-radius: 5px;
-  background: #1A181C;
-  opacity: 0.9;
+  border: 1px solid #9EE4ED;
   color: black;
-  width:  350px;
-  padding: 45px 30px;
-  margin-bottom: 20px;
+  width:  310px;
+  padding: 20px;
+  margin: 30px 0px 20px 0px;
 }
 
 #africanSerengetiGrasslandButtons, #floridaEvergladesButtons{
@@ -213,18 +227,25 @@ button img{
   display:  grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px 10px;
+  margin-bottom: 20px;
 }
 
 .pause{
-  background: white;
+  background: none;
 }
 
 .play{
-  background: #E5E5E5;
+  box-shadow: none !important;
+  background: #9EE4ED;
 }
 
 #credit-link{
   position: relative;
   top: 0px;
-  padding: 20px;
 }
+
+.selected-Choose{
+  background: #49B5C3 !important;
+}
+
+

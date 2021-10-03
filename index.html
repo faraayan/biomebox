@@ -66,14 +66,13 @@
 
   <div id = "rectangle"></div>
   <!-- DISPLAYED CONTENT -->
-  <h1 style = "top: 12px" id = "logo">biomebox</h1>
-  
-  <div style="position: fixed; bottom: 0%; top: 30px; left: 15px">
+  <div id = "complete-bar" style="position: fixed; bottom: 0%; padding-left:35px">
+    <h1 id = "logo">biomebox</h1>
     <div class = "choose-bar">
       <div id = "choose-buttons" class = "choose-content">
-        <button onclick= "setEcosystem('amazonRainforest')">🦥</button>
-        <button onclick= "setEcosystem('africanSerengetiGrassland')">🦜</button>
-        <button onclick= "setEcosystem('floridaEverglades')">🦧</button>
+        <button id = "amazonRainforestChoose" class = "selected-Choose" onclick= "setEcosystem('amazonRainforest')">🦥</button>
+        <button id = "africanSerengetiGrasslandChoose" onclick= "setEcosystem('africanSerengetiGrassland')">🦜</button>
+        <button id = "floridaEvergladesChoose" onclick= "setEcosystem('floridaEverglades')">🦧</button>
       </div>
       <button id = "close" onclick = "hide()">X</button>
     </div>
@@ -245,6 +244,8 @@
     var previousVideo = document.getElementById(currentEcosystem+"Video")
     var audio = document.getElementById(ecosystem + "Audio");
     var previousAudio = document.getElementById(currentEcosystem + "Audio");
+    var chooseButton = document.getElementById(ecosystem+"Choose")
+    var previousChooseButton = document.getElementById(currentEcosystem+"Choose")
 
     if(ecosystem == "amazonRainforest"){
       title.innerHTML = "Amazon Rainforest 🌳";
@@ -266,6 +267,8 @@
     audio.play();
 
     if(ecosystem != currentEcosystem){
+      previousChooseButton.classList.remove("selected-Choose");
+      chooseButton.classList.add("selected-Choose");
       while(soundArray.length>0) {
         var mySound = soundArray.pop();
         var audio = document.getElementById(mySound);
