@@ -22,6 +22,7 @@
     <source src="audio/floridaEverglades.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <!-- AMAZON -->
   <audio id="harpyEagle">
     <source src="audio/harpyEagle.ogg" type="audio/ogg">
     <source src="audio/harpyEagle.mp3" type="audio/mpeg">
@@ -52,6 +53,31 @@
     <source src="audio/greenIguana.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <!-- GRASSLAND -->
+  <audio id="zebra">
+    <source src="audio/zebra.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="thomsonsGazelle">
+    <source src="audio/thomsonsGazelle.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="impala">
+    <source src="audio/impala.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="blueWildebeest">
+    <source src="audio/blueWildebeest.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="southernGroundHornbill">
+    <source src="audio/southernGroundHornbill.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="waterbuck">
+    <source src="audio/waterbuck.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <!-- VIDEO LIBRARY -->
   <video autoplay muted loop id="amazonRainforestVideo">
@@ -71,8 +97,8 @@
     <div class = "choose-bar">
       <div id = "choose-buttons" class = "choose-content">
         <button id = "amazonRainforestChoose" class = "selected-Choose" onclick= "setEcosystem('amazonRainforest')">🦥</button>
-        <button id = "africanSerengetiGrasslandChoose" onclick= "setEcosystem('africanSerengetiGrassland')">🦜</button>
-        <button id = "floridaEvergladesChoose" onclick= "setEcosystem('floridaEverglades')">🦧</button>
+        <button id = "africanSerengetiGrasslandChoose" onclick= "setEcosystem('africanSerengetiGrassland')">🦓</button>
+        <button id = "floridaEvergladesChoose" onclick= "setEcosystem('floridaEverglades')">🐊</button>
       </div>
       <button id = "close" onclick = "hide()">X</button>
     </div>
@@ -102,23 +128,23 @@
           </button>
         </div>
         <div class = "audio-grid" id = "africanSerengetiGrasslandButtons">
-          <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
-            <img src="img/sloth.png" alt="">
+          <button onclick="playAudio1('zebra', 'zebraButton')" type="button" id = "zebraButton">
+            <img style = "width: 53px; left: 12px" src="img/zebra.png" alt="">
           </button>
-          <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
-            <img style = "width: 93px; left: 0px" src="img/sloth.png" alt="">
+          <button onclick="playAudio1('thomsonsGazelle', 'thomsonsGazelleButton')" type="button" id = "thomsonsGazelleButton">
+            <img style = "width: 53px; left: 12px; top:3px" src="img/thomsonsGazelle.png" alt="">
           </button>
-          <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
-            <img style = "width: 65px; left: 11px; top: 27px;" src="img/sloth.png" alt="">
+          <button onclick="playAudio1('impala', 'impalaButton')" type="button" id = "impalaButton">
+            <img style = "width: 55px; left: 10px; top: 13px;" src="img/impala.png" alt="">
           </button>
-          <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
-            <img style = "width: 65px; left: 11px; top: 25px;" src="img/sloth.png" alt="">
+          <button onclick="playAudio1('blueWildebeest', 'blueWildebeestButton')" type="button" id = "blueWildebeestButton">
+            <img style = "width: 65px; left: 5px; top: 18px;" src="img/blueWildebeest.png" alt="">
           </button>
-          <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
-            <img style = "width: 84px; left: 5px; top: 12px;" src="img/sloth.png" alt="">
+          <button onclick="playAudio1('southernGroundHornbill', 'southernGroundHornbillButton')" type="button" id = "southernGroundHornbillButton">
+            <img style = "width: 64px; left: 10px; top: 15px;" src="img/southernGroundHornbill.png" alt="">
           </button>
-          <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
-            <img style = "width: 60px; left: 11px; top: 25px;" src="img/sloth.png" alt="">
+          <button onclick="playAudio1('waterbuck', 'waterbuckButton')" type="button" id = "waterbuckButton">
+            <img style = "width: 60px; left: 8px; top: 14px;" src="img/waterbuck.png" alt="">
           </button>
         </div>
         <div class = "audio-grid" id = "floridaEvergladesButtons">
@@ -238,6 +264,42 @@
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Green iguanas are the largest lizards in the Americas, extending from southern Mexico to central Brazil. They are primarily herbivores, feeding on leaves, flowers, and fruit. Green iguanas are quite common in the wild, but can face threats from habitat degradation by human development and invasive species.";
         didYouKnow.innerHTML = "Did you know? Green iguanas are able to hold their breath for up to 30 minutes!";
+      }
+      else if(toDisplay == "zebra"){
+        title.innerHTML = "About the Zebra";
+        conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
+        info.innerHTML = "Zebras are short, stocky animals that live in treeless grasslands and woodlands of eastern and southern Africa. They primarily eat Bermuda grass, and have stripes that work as camouflage by breaking up the outline of the body. Its population is threatened by habitat loss and agricultural practices.<br>";
+        didYouKnow.innerHTML = "Did you know? Each zebra has its own unique pattern of stripes, just like human fingerprints!";
+      }
+      else if(toDisplay == "thomsonsGazelle"){
+        title.innerHTML = "About the Thomson's Gazelle";
+        conservationStatus.innerHTML = "Conservation Status: Near Threatened<br>"
+        info.innerHTML = "Thomson’s gazelles are small gazelles with light-brown coats and dark stripes running down their sides. They are found on dry, grassy plains and are fast sprinters that can reach speeds of 40 miles an hour. Thomson’s gazelles primarily feed on grass, but occasionally also consume seeds and shrubs.<br>";
+        didYouKnow.innerHTML = "Did you know? Thomson's gazelles are able to shrink oxygen-demanding organs like the heart and liver!";
+      }
+      else if(toDisplay == "impala"){
+        title.innerHTML = "About the Impala";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Impalas are medium-sized antelopes that roam the grasslands and savannas of eastern and southern Africa. They are herbivores, and their diet mainly consists of bark, leaves, wood, and stems. Impalas also move together in herds to prevent predators from striking, by leaping and scattering in all directions when being attacked to confuse the predator.<br>";
+        didYouKnow.innerHTML = "Did you know? The name ‘Impala’ comes from the Zulu language meaning ‘gazelle’!";
+      }
+      else if(toDisplay == "blueWildebeest"){
+        title.innerHTML = "About the Blue Wildebeest";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Blue wildebeests are large African antelopes closely related to cattle, with curved horns and striped bodies. They inhabit grassy plains and open woodlands of Africa, and travel in large herds that graze constantly.<br>";
+        didYouKnow.innerHTML = "Did you know? Blue wildebeests can run up to 40 mph, an amazing speed!";
+      }
+      else if(toDisplay == "southernGroundHornbill"){
+        title.innerHTML = "About the Southern Ground Hornbill";
+        conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
+        info.innerHTML = "Southern ground hornbills are the largest species of hornbill, growing to around the size of a turkey. They can fly up to 18 miles an hour and hold an impressive wingspan of nearly 4 feet. Southern ground hornbills can be spotted by their jet-black feathers, yellow eyes, and bright red throat.<br>";
+        didYouKnow.innerHTML = "Did you know? Southern ground hornbills spend about 70% of their day on the ground, foraging for food!";
+      }
+      else if(toDisplay == "waterbuck"){
+        title.innerHTML = "About the Waterbuck";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Waterbucks are large animals with long hair and a brown-gray coat, primarily located in sub-Saharan Africa. Waterbucks are also excellent swimmers who often enter the water to escape from predators, and herbivores that feed on a variety of grasses. Waterbuck populations have been declining due to poaching and human settlements, as well as heavy metal poisoning in the Lake Nakuru National Park.<br>";
+        didYouKnow.innerHTML = "Did you know? Female waterbuck communicate with their calves by bleating or snorting!";
       }
     }else{
       about.style.display = "none";
