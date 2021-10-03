@@ -275,15 +275,32 @@ button img{
   border-radius: 30px;
 }
 
-#action-content{
+#right-content{
   position: fixed;
   right: 20px;
   top: 20px;
+}
+
+#action-content{
+  position: relative;
   background-color: #2A314E;
   width: 270px;
   padding: 30px;
   border-radius: 5px;
   border-bottom: 12px solid #49B5C3;
+}
+
+#volume-content{
+  position: absolute;
+  right: -10px;
+}
+
+#volume-button{
+  box-shadow: none;
+}
+
+#volume-button img{
+  width: 50px;
 }
 
 #action-content img{

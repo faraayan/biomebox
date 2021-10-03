@@ -207,12 +207,17 @@
     </div>
   </div>
 
-  <div id = "action-content">
-    <button onclick = "reload()" style = "display: none" id = "reload"><img src="img/reload.png" alt=""></button>
-    <h3 id = "action-task">Learn ways to take care of our rainforest. 🌏</h3>
-    <button id = "generate" onclick = "showAction()">Generate my sustainable goal</button>
-    <p class = "help" id = "action-help" style = "display:none">How will this help?</p>
-    <p id = "action-info" style = "display:none"> Recycling saves energy and water, lowers pollution, improves air and water quality, and is more energy-efficient than producing new items from raw resources.</p>
+  <div id = "right-content">
+    <div id = "action-content">
+      <button onclick = "reload()" style = "display: none" id = "reload"><img src="img/reload.png" alt=""></button>
+      <h3 id = "action-task">Learn ways to take care of our rainforest. 🌏</h3>
+      <button id = "generate" onclick = "showAction()">Generate my sustainable goal</button>
+      <p class = "help" id = "action-help" style = "display:none">How will this help?</p>
+      <p id = "action-info" style = "display:none"> Recycling saves energy and water, lowers pollution, improves air and water quality, and is more energy-efficient than producing new items from raw resources.</p>
+    </div>
+    <div id = "volume-content">
+      <button id = "volume-button" onclick = "adjustVolume()"><img id = "volume-img" src="img/unmute.png" alt=""></button>
+    </div>
   </div>
   
 
@@ -231,6 +236,7 @@
       audio.pause();
       button.classList.add("pause");
       button.classList.remove("play");
+
       soundArray.splice(soundArray.indexOf(audioID), 1);
     }else{
       audio.play();
@@ -239,6 +245,19 @@
       soundArray.push(audioID);
     }
     setAboutSection();
+  }
+
+  function adjustVolume(){
+    var img = document.getElementById("volume-img");
+    if(img.classList.contains("mute")){
+      //talk again
+      img.src = "img/unmute.png"
+      img.classList.remove("mute");
+    }else{
+      //mute
+      img.classList.add("mute");
+      img.src = "img/mute.png"
+    }
   }
 
   // Set audio to varying volumes
@@ -449,7 +468,6 @@
       var about = document.getElementById("about");
       about.style.display = "none";
     }
-
     currentEcosystem = ecosystem;
   }
 
