@@ -117,15 +117,17 @@
 
   <div id = "rectangle"></div>
   <!-- DISPLAYED CONTENT -->
-  <div id = "complete-bar" style="position: fixed; bottom: 0%; padding-left:35px;">
-    <h1 id = "logo">biomebox</h1>
+  <div id = "complete-bar" class = "complete-bar"style="position: fixed; bottom: 0%; padding-left:35px;">
+    <div id = "top-bar">
+      <h1 id = "logo">biomebox</h1>
+      <button id = "close" onclick = "hide()">–</button>
+    </div>
     <div class = "choose-bar">
       <div id = "choose-buttons" class = "choose-content">
         <button id = "amazonRainforestChoose" class = "selected-Choose" onclick= "setEcosystem('amazonRainforest')">🦥</button>
         <button id = "africanSerengetiGrasslandChoose" onclick= "setEcosystem('africanSerengetiGrassland')">🦓</button>
         <button id = "floridaEvergladesChoose" onclick= "setEcosystem('floridaEverglades')">🐊</button>
       </div>
-      <button id = "close" onclick = "hide()">X</button>
     </div>
     <div class = "content" id = "content">
       <div class = "main-content">
@@ -202,6 +204,14 @@
 
       <div id = "credit-link"><a target = "_blank" href="https://www.youtube.com/watch?v=-53mGJ4h5sQ">Video Credits: Amazon Rainforest by Scenic Scenes</a></div>
     </div>
+  </div>
+
+  <div id = "action-content">
+    <button onclick = "reload()" style = "display: none" id = "reload"><img src="img/reload.png" alt=""></button>
+    <h3 id = "action-task">Learn ways to take care of our rainforest. 🌏</h3>
+    <button id = "generate" onclick = "showAction()">Generate my sustainable goal</button>
+    <p class = "help" style = "display:none">How will this help?</p>
+    <p id = "action-info" style = "display:none"> Recycling saves energy and water, lowers pollution, improves air and water quality, and is more energy-efficient than producing new items from raw resources.</p>
   </div>
   
 
@@ -415,22 +425,50 @@
     currentEcosystem = ecosystem;
   }
 
-  function hide(){
+  function showAction(){
+    var buttonToShow = document.getElementById("reload");
+    var buttonToHide = document.getElementById("generate");
+    reload()
+    buttonToShow.style.display = "block";
+    buttonToHide.style.display = "none";
+  }
 
+  function reload(){
+    var task = document.getElementById("action-task");
+    var info = document.getElementById("action-info");
+    var taskArray = ["Use scrap paper and be cautious of paper consumption. 📑", "Walk, bike or take public transit. 🚴‍♂️", "Choose reusable over single-use plastics. ♻️", "Conserve electricity around your home. 💡"];
+    var infoArray = ["Recycling saves energy and water, lowers pollution, improves air and water quality, and is more energy-efficient than producing new items from raw resources.", "By taking an alternate method of transportation, we can limit the pollution from car emissions into the atmosphere. This will reduce air pollution and greenhouse gases, which greatly threaten our current ecosystems.", "Over 8 million tons of plastic end up in our oceans every year, posing a threat to aquatic life. Some ways to mitigate this is making the switch to using cloth bags and reusable water bottles.", "Since electricity sources are likely to dwindle in the future, reserving electricity for future generations can be beneficial. We can do this by using natural light, turning off unnecessary lights, and using energy-efficient light bulbs."];
+    var randomNumber = Math.floor(Math.random() * taskArray.length);
+
+    task.innerHTML = taskArray[randomNumber];
+    info.innerHTML = infoArray[randomNumber];
+    task.style.display = "block";
+    info.style.display = "block";
+  }
+
+  function hide(){
     var content = document.getElementById("content");
     var buttons = document.getElementById("choose-buttons");
     var closeButton = document.getElementById("close");
+    var complete = document.getElementById("complete-bar");
+    var bar = document.getElementById("top-bar");
 
     if(!closeButton.classList.contains("hidden")){
       content.style.display = "none";
       buttons.style.display = "none";
-      closeButton.innerHTML = ">";
+      closeButton.innerHTML = "+";
+      buttons.classList.remove("play");
       closeButton.classList.add("hidden");
+      complete.classList.remove("complete-bar");
+      bar.classList.add("top-border");
     }else{
-      content.style.display = "initial";
+      content.style.display = "inline";
       buttons.style.display = "flex";
-      closeButton.innerHTML = "X";
+      closeButton.innerHTML = "–";
       closeButton.classList.remove("hidden");
+      closeButton.classList.remove("hidden");
+      complete.classList.add("complete-bar");
+      bar.classList.remove("top-border");
     }
   }
 

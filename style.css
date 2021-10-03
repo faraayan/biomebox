@@ -124,7 +124,7 @@ button img{
   left: 8%;
 }
 
-#complete-bar{
+.complete-bar{
   position: fixed;
   width: 390px;
   background-color: #2A314E;
@@ -143,17 +143,6 @@ button img{
   margin: 0px;
 }
 
-#close{
-  position: relative;
-  display: inline-block;
-  height: 55px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  border-radius: 30px;
-}
-
 .hidden{
   margin-top: 12px;
 }
@@ -162,6 +151,10 @@ button img{
   position: fixed;
   max-height: 75%;
   overflow-y: scroll;
+}
+
+.top-border{
+  border-top: 12px solid #49B5C3;
 }
 
 .choose-bar button{
@@ -248,4 +241,80 @@ button img{
   background: #49B5C3 !important;
 }
 
+#top-bar{
+  position: relative;
+  left: -20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #2A314E;
+  width: 180px;
+  height: 60px;
+  padding: 0px 20px 20px 20px;
+}
+
+#close{
+  position: relative;
+  display: inline-block;
+  height: 55px;
+  color: white;
+  margin-top: 22px;
+  box-shadow: none;
+  text-align: center;
+  font-size: 25px;
+  left: 10px;
+  border-radius: 30px;
+}
+
+#action-content{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background-color: #2A314E;
+  width: 270px;
+  padding: 30px;
+  border-radius: 5px;
+  border-bottom: 12px solid #49B5C3;
+}
+
+#action-content img{
+  width: 30px;
+}
+
+#reload{
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#action-content h3{
+  color: white;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+#action-content .help{
+  text-decoration: underline;
+}
+
+#action-content p{
+  line-height: 140%;
+  margin-top: -10px;
+}
+
+#generate{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  width: 270px;
+  height: 20px;
+  text-align: left;
+  box-shadow: none;
+  text-decoration: underline;
+  color: white;
+}
 
