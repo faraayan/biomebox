@@ -66,7 +66,7 @@
 
   <div id = "rectangle"></div>
   <!-- DISPLAYED CONTENT -->
-  <div id = "complete-bar" style="position: fixed; bottom: 0%; padding-left:35px">
+  <div id = "complete-bar" style="position: fixed; bottom: 0%; padding-left:35px;">
     <h1 id = "logo">biomebox</h1>
     <div class = "choose-bar">
       <div id = "choose-buttons" class = "choose-content">
@@ -212,23 +212,32 @@
         conservationStatus.innerHTML = "Conservation Status: Near Threatened<br>"
         info.innerHTML = "Harpy Eagles are the largest and most powerful raptors in the world, inhabiting tropical rainforests in the canopy layer. Harpy Eagles are carnivores and mainly prey on tree-dwelling mammals such as sloths, monkeys, and opossums. In recent years, this species is declining moderately due to hunting and habitat loss.<br>";
         didYouKnow.innerHTML = "Did you know? Harpy Eagles can grow over 1 meter long and reach a wingspan of 7.5 feet!";
-
       }else if(toDisplay == "sloth"){
         title.innerHTML = "About the Sloth";
-        info.innerHTML = "AboutLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+        conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
+        info.innerHTML = "Sloths are sluggish tree-dwellers of Central and South America, moving around 40 years per day through the canopy layer of tropical rainforests. Sloths have long arms, shaggy fur, and rounded heads with small ears. They are herbivores who mainly consume leaves, twigs, and occasionally fruits. ";
+        didYouKnow.innerHTML = "Did you know? Sloths spend around 15 to 18 hours of their day sleeping upside down!";
       }else if(toDisplay == "anteater"){
         title.innerHTML = "About the Anteater";
-        info.innerHTML = "About";
+        conservationStatus.innerHTML = "Conservation Status: Vulnerable<br>"
+        info.innerHTML = "Anteaters are large, insectivorous mammals native to South and Central America. They can be identified by their long snout and sticky 2-foot-long tongue used to snag over 35,000 ants and termites every day. Anteaters are slowly disappearing due to habitat destruction and road kills, and are already considered extinct in areas of Belize, Costa Rica, Guatemala, and Uruguay.";
+        didYouKnow.innerHTML = "Did you know? Anteaters have the lowest body temperature of any mammal, at 32.7° Celsius (90.9°Fahrenheit)!";
       }else if(toDisplay == "pinkRiverDolphin"){
-        title.innerHTML = "About the Pink River Dolphin";
-        info.innerHTML = "About";
+        title.innerHTML = "About the Sloth";
+        conservationStatus.innerHTML = "Conservation Status: Not Extinct<br>"
+        info.innerHTML = "Pink river dolphins are the largest freshwater dolphin species, found primarily in the Amazon rivers of South America. These dolphins are born gray and slowly turn pink as they age and their color is influenced by their behavior, diet, and exposure to sunlight. Pink river dolphins can be threatened by water contamination, which can occur through the pollution of toxic chemicals from plastics or oil spills into the Amazon rivers.";
+        didYouKnow.innerHTML = "Did you know? Pink river dolphins are impressively agile and can turn their heads 180 degrees!";
       }else if(toDisplay == "giantRiverOtter"){
-        title.innerHTML = "About the Giant River Otter";
-        info.innerHTML = "About";
+        title.innerHTML = "About the Sloth";
+        conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
+        info.innerHTML = "Giant river otters are north-central South American carnivorous mammals that mostly live along the Amazon River and in the Pantanal. They have long, narrow bodies, and long sensitive whiskers to help them feel the vibrations of their prey. These otters are a top predator in aquatic systems, controlling prey species population sizes to keep the ecosystem in balance. Giant river otters were listed as endangered in 1999 due to demand for its fur, poaching, and habitat description.";
+        didYouKnow.innerHTML = "Did you know? Giant otters are excellent swimmers due to their webbed feet and flattened tail, allowing them to swim up to 9 miles per hour!";
       }
       else if(toDisplay == "greenIguana"){
-        title.innerHTML = "About the Green Iguana";
-        info.innerHTML = "About";
+        title.innerHTML = "About the Sloth";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Green iguanas are the largest lizards in the Americas, extending from southern Mexico to central Brazil. They are primarily herbivores, feeding on leaves, flowers, and fruit. Green iguanas are quite common in the wild, but can face threats from habitat degradation by human development and invasive species.";
+        didYouKnow.innerHTML = "Did you know? Green iguanas are able to hold their breath for up to 30 minutes!";
       }
     }else{
       about.style.display = "none";
