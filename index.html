@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>biomebox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+  <!-- AUDIO LIBRARY -->
+  <audio id="amazonRainforestAudio">
+    <source src="audio/amazonRainforest.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="africanSerengetiGrasslandAudio">
+    <source src="audio/africanSerengetiGrassland.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="floridaEvergladesAudio">
+    <source src="audio/floridaEverglades.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="harpyEagle">
+    <source src="audio/harpyEagle.ogg" type="audio/ogg">
+    <source src="audio/harpyEagle.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="sloth">
+    <source src="audio/sloth.ogg" type="audio/ogg">
+    <source src="audio/sloth.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="anteater">
+    <source src="audio/anteater.ogg" type="audio/ogg">
+    <source src="audio/anteater.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="pinkRiverDolphin">
+    <source src="audio/pinkRiverDolphin.ogg" type="audio/ogg">
+    <source src="audio/pinkRiverDolphin.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="giantRiverOtter">
+    <source src="audio/giantRiverOtter.ogg" type="audio/ogg">
+    <source src="audio/giantRiverOtter.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="greenIguana">
+    <source src="audio/greenIguana.ogg" type="audio/ogg">
+    <source src="audio/greenIguana.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- VIDEO LIBRARY -->
+  <video autoplay muted loop id="amazonRainforestVideo">
+    <source src="video/amazonRainforest.mp4" type="video/mp4">
+  </video>
+  <video autoplay muted loop id="africanSerengetiGrasslandVideo">
+    <source src="video/africanSerengetiGrassland.mp4" type="video/mp4">
+  </video>
+  <video autoplay muted loop id="floridaEvergladesVideo">
+    <source src="video/floridaEverglades.mp4" type="video/mp4">
+  </video>
+
+  <div id = "rectangle"></div>
+  <!-- DISPLAYED CONTENT -->
+  <h1 style = "top: 12px" id = "logo">biomebox</h1>
+  
+  <div style="position: fixed; bottom: 0%; top: 30px; left: 15px">
+    <div class = "choose-bar">
+      <div id = "choose-buttons" class = "choose-content">
+        <button onclick= "setEcosystem('amazonRainforest')">🦥</button>
+        <button onclick= "setEcosystem('africanSerengetiGrassland')">🦜</button>
+        <button onclick= "setEcosystem('floridaEverglades')">🦧</button>
+      </div>
+      <button id = "close" onclick = "hide()">X</button>
+    </div>
+    <div class = "content" id = "content">
+      <div class = "main-content">
+        <h1 id = "main-title">Amazon Rainforest 🌳</h1>
+        <p id = "main-info" style = "padding-bottom: 10px">As the world’s largest tropical rainforest, the Amazon Rainforest is located in South America and home to nearly 40,000 plant species, 427 mammals, and over 2.5 million different insects, making the ecosystem incredibly biodiverse. The Amazon Rainforest is vital to our planet by slowing climate change through sequestering carbon from the atmosphere and storing it in its trees.</p>
+        <p>Click each animal to hear their sound and discover their role in the ecosystem!</p>
+        <div class = "audio-grid" id = "amazonRainforestButtons">
+          <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
+            <img src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
+            <img style = "width: 93px; left: 0px" src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
+            <img style = "width: 65px; left: 11px; top: 27px;" src="img/anteater.png" alt="">
+          </button>
+          <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
+            <img style = "width: 65px; left: 11px; top: 25px;" src="img/pinkRiverDolphin.png" alt="">
+          </button>
+          <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
+            <img style = "width: 84px; left: 5px; top: 12px;" src="img/giantRiverOtter.png" alt="">
+          </button>
+          <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
+            <img style = "width: 60px; left: 11px; top: 25px;" src="img/greenIguana.png" alt="">
+          </button>
+        </div>
+        <div class = "audio-grid" id = "africanSerengetiGrasslandButtons">
+          <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
+            <img src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
+            <img style = "width: 93px; left: 0px" src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
+            <img style = "width: 65px; left: 11px; top: 27px;" src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
+            <img style = "width: 65px; left: 11px; top: 25px;" src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
+            <img style = "width: 84px; left: 5px; top: 12px;" src="img/sloth.png" alt="">
+          </button>
+          <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
+            <img style = "width: 60px; left: 11px; top: 25px;" src="img/sloth.png" alt="">
+          </button>
+        </div>
+        <div class = "audio-grid" id = "floridaEvergladesButtons">
+          <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
+            <img src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
+            <img style = "width: 93px; left: 0px" src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
+            <img style = "width: 65px; left: 11px; top: 27px;" src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
+            <img style = "width: 65px; left: 11px; top: 25px;" src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
+            <img style = "width: 84px; left: 5px; top: 12px;" src="img/harpyEagle.png" alt="">
+          </button>
+          <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
+            <img style = "width: 60px; left: 11px; top: 25px;" src="img/harpyEagle.png" alt="">
+          </button>
+        </div>
+      </div>
+      <div class = "about-content" id = "about">
+        <h2 id = "about-title">About the Sloth</h2>
+        <p id = "conservation-status">Conservation status:<br>Did you know? </p>
+        <p id = "about-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p id = "did-you-know">Did you know?</p>
+      </div>
+
+      <div id = "credit-link"><a target = "_blank" href="https://www.youtube.com/watch?v=-53mGJ4h5sQ">Video Credits: Amazon Rainforest by Scenic Scenes</a></div>
+    </div>
+  </div>
+  
+
+  <!-- JAVASCRIPT -->
+  <script>
+  var soundArray = [];
+  var currentEcosystem = "amazonRainforest";
+  // Play audio and change button from parameters audioID and buttonID
+  function playAudio1(audioID, buttonID) {
+    var audio = document.getElementById(audioID);
+    var button = document.getElementById(buttonID);
+    var about = document.getElementById("about");
+    audio.volume = setVolume(audioID);
+    if(button.classList.contains("play")){
+      about.style.display = "none";
+      audio.pause();
+      button.classList.add("pause");
+      button.classList.remove("play");
+      soundArray.splice(soundArray.indexOf(audioID), 1);
+    }else{
+      audio.play();
+      button.classList.add("play");
+      button.classList.remove("pause");
+      soundArray.push(audioID);
+    }
+    setAboutSection();
+  }
+
+  // Set audio to varying volumes
+  function setVolume(audioID){
+    if(audioID == "harpyEagle"){
+      return 0.8;
+    }else if(audioID == "sloth"){
+      return 0.7;
+    }else if(audioID == "anteater"){
+      return 0.1;
+    }else if(audioID == "pinkRiverDolphin"){
+      return 0.2;
+    }else if(audioID == "giantRiverOtter"){
+      return 0.6;
+    }else if(audioID == "greenIguana"){
+      return 0.6;
+    }
+    return 0.5;
+  }
+
+  // Set information for animal pop-ups
+  function setAboutSection() {
+    var title = document.getElementById("about-title");
+    var info = document.getElementById("about-info");
+    var about = document.getElementById("about");
+    var conservationStatus = document.getElementById("conservation-status");
+    var didYouKnow = document.getElementById("did-you-know");
+    if(soundArray.length>0){
+      var toDisplay = soundArray[soundArray.length-1];
+      about.style.display = "block";
+      if(toDisplay == "harpyEagle"){
+        title.innerHTML = "About the Harpy Eagle";
+        conservationStatus.innerHTML = "Conservation Status: Near Threatened<br>"
+        info.innerHTML = "Harpy Eagles are the largest and most powerful raptors in the world, inhabiting tropical rainforests in the canopy layer. Harpy Eagles are carnivores and mainly prey on tree-dwelling mammals such as sloths, monkeys, and opossums. In recent years, this species is declining moderately due to hunting and habitat loss.<br>";
+        didYouKnow.innerHTML = "Did you know? Harpy Eagles can grow over 1 meter long and reach a wingspan of 7.5 feet!";
+
+      }else if(toDisplay == "sloth"){
+        title.innerHTML = "About the Sloth";
+        info.innerHTML = "AboutLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+      }else if(toDisplay == "anteater"){
+        title.innerHTML = "About the Anteater";
+        info.innerHTML = "About";
+      }else if(toDisplay == "pinkRiverDolphin"){
+        title.innerHTML = "About the Pink River Dolphin";
+        info.innerHTML = "About";
+      }else if(toDisplay == "giantRiverOtter"){
+        title.innerHTML = "About the Giant River Otter";
+        info.innerHTML = "About";
+      }
+      else if(toDisplay == "greenIguana"){
+        title.innerHTML = "About the Green Iguana";
+        info.innerHTML = "About";
+      }
+    }else{
+      about.style.display = "none";
+    }
+  }
+
+  function setEcosystem(ecosystem){
+    var title = document.getElementById("main-title");
+    var info = document.getElementById("main-info");
+    var buttons = document.getElementById(ecosystem+"Buttons")
+    var previousButtons = document.getElementById(currentEcosystem+"Buttons")
+    var video = document.getElementById(ecosystem+"Video")
+    var previousVideo = document.getElementById(currentEcosystem+"Video")
+    var audio = document.getElementById(ecosystem + "Audio");
+    var previousAudio = document.getElementById(currentEcosystem + "Audio");
+
+    if(ecosystem == "amazonRainforest"){
+      title.innerHTML = "Amazon Rainforest 🌳";
+      info.innerHTML = "As the world’s largest tropical rainforest, the Amazon Rainforest is located in South America and home to nearly 40,000 plant species, 427 mammals, and over 2.5 million different insects, making the ecosystem incredibly biodiverse. The Amazon Rainforest is vital to our planet by slowing climate change through sequestering carbon from the atmosphere and storing it in its trees.";
+
+    }else if(ecosystem == "africanSerengetiGrassland"){
+      title.innerHTML = "African Serengeti Grassland 🌳";
+      info.innerHTML = "The Serengeti is a vast ecosystem in semi-desert grasslands of east-central Africa, grazed by wildlife and livestock. The area contains rich volcanic soils and an arid climate, acting as a feeding ground for over 1500 exotic animals. Every year, over 2 million animals migrate in a clockwise direction across the Serengeti known as the Great Wildebeest Migration.";
+    
+    }else if(ecosystem == "floridaEverglades"){
+      title.innerHTML = "Florida Everglades 🌳";
+      info.innerHTML = "The Everglades is one of the world’s most unique ecosystems, consisting of tropical wetlands, sawgrass marshes, and mangrove swamps, spanning over 2 million acres across Florida. This ecosystem remains a crucial habitat to numerous endangered wildlife and provides drinking water for over 8 million Floridians.G";
+    }
+    previousButtons.style.display = "none";
+    buttons.style.display = "grid";
+    previousVideo.style.display = "none";
+    video.style.display = "initial";
+    previousAudio.pause();
+    audio.play();
+
+    if(ecosystem != currentEcosystem){
+      while(soundArray.length>0) {
+        var mySound = soundArray.pop();
+        var audio = document.getElementById(mySound);
+        audio.pause();
+        var button = document.getElementById(mySound+"Button");
+        button.classList.add("pause");
+        button.classList.remove("play");
+      }
+      var about = document.getElementById("about");
+      about.style.display = "none";
+    }
+
+    currentEcosystem = ecosystem;
+  }
+
+  function hide(){
+
+    var content = document.getElementById("content");
+    var buttons = document.getElementById("choose-buttons");
+    var closeButton = document.getElementById("close");
+
+    if(!closeButton.classList.contains("hidden")){
+      content.style.display = "none";
+      buttons.style.display = "none";
+      closeButton.innerHTML = ">";
+      closeButton.classList.add("hidden");
+    }else{
+      content.style.display = "initial";
+      buttons.style.display = "flex";
+      closeButton.innerHTML = "X";
+      closeButton.classList.remove("hidden");
+    }
+  }
+
+
+  </script>
+
+</body>
+</html>

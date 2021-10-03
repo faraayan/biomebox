@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Soleil Regular";
+  src: url("font/SoleilRegular.otf");
+}
+
+@font-face {
+  font-family: "Soleil Bold";
+  src: url("font/SoleilBold.otf");
+}
+
+@font-face {
+  font-family: "Soleil Semibold";
+  src: url("font/Soleil SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Soleil Light";
+  src: url("font/Soleil Light.otf");
+}
+
+@font-face {
+  font-family: "Soleil Book";
+  src: url("font/Soleil Book.otf");
+}
+
+@font-face {
+  font-family: "Mikado Medium";
+  src: url("font/Mikado Medium.ttf");
+}
+
+@font-face {
+  font-family: "Mikado Regular";
+  src: url("font/Mikado Regular.ttf");
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Soleil Regular";
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left:  0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#rectangle{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width:  100%;
+  height:  100%;
+  background-color: pink;
+  opacity: 0.4;
+  mix-blend-mode: soft-light;
+}
+
+#logo{
+  font-family: "Soleil Semibold";
+  position: fixed;
+  top: 0px;
+  left: 45%;
+  color: white;
+}
+
+h1{
+  color: white;
+  font-family: "Soleil Book";
+  font-size:  30px;
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  color: white;
+  font-family: "Soleil Book";
+  font-size:  25px;
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  color: white;
+  font-size:  15px;
+}
+
+a{
+  color: white;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+button {
+  position:relative;
+  width: 90px;
+  height: 90px;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+button img{
+  width:  73px;
+  position:absolute;
+  top: 17%;
+  left: 8%;
+}
+
+.choose-bar{
+  position: relative;
+  display: flex;
+  border-radius: 7px;
+  grid-gap: 15px;
+  align-items: center;
+  margin: 0px;
+}
+
+#close{
+  position: relative;
+  display: inline-block;
+  height: 55px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 30px;
+}
+
+.hidden{
+  margin-top: 12px;
+}
+
+.choose-bar button{
+  border: none;
+  color: black;
+  width:  auto;
+  height: auto;
+  padding: 10px 23px;
+  font-size: 23px;
+  background: none;
+  opacity: 0.9;
+}
+
+.choose-content{
+  position: relative;
+  display: flex;
+  border-radius: 7px;
+  grid-gap: 15px;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.choose-content button{
+  border: none;
+  color: white;
+  width:  auto;
+  height: auto;
+  padding: 18px 23px;
+  font-size: 23px;
+  background: #1A181C;
+  opacity: 0.9;
+}
+
+.main-content {
+  position: relative;
+  border-radius: 7px;
+  background: #1A181C;
+  opacity: 0.9;
+  color: black;
+  width:  350px;
+  padding: 45px 30px;
+}
+
+.about-content{
+  display:  none;
+  position: fixed;
+  bottom: 40px;
+  left:  440px;
+  border-radius: 5px;
+  background: #1A181C;
+  opacity: 0.9;
+  color: black;
+  width:  350px;
+  padding: 45px 30px;
+  margin-bottom: 20px;
+}
+
+#africanSerengetiGrasslandButtons, #floridaEvergladesButtons{
+  display: none;
+}
+
+#africanSerengetiGrasslandVideo, #floridaEvergladesVideo{
+  display: none;
+}
+
+.audio-grid{
+  width: 300px;
+  display:  grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px 10px;
+}
+
+.pause{
+  background: white;
+}
+
+.play{
+  background: #E5E5E5;
+}
+
+#credit-link{
+  position: relative;
+  top: 0px;
+  padding: 20px;
+}
