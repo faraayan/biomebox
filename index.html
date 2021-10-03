@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>biomebox</title>
+  <title>biomebox: Explore Earth's Biomes</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
@@ -78,6 +78,31 @@
     <source src="audio/waterbuck.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <!-- EVERGLADES -->
+  <audio id="floridaPanther">
+    <source src="audio/floridaPanther.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="americanAlligator">
+    <source src="audio/americanAlligator.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="manatee">
+    <source src="audio/manatee.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="woodStork">
+    <source src="audio/woodStork.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="greatEgret">
+    <source src="audio/greatEgret.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="marshRabbit">
+    <source src="audio/marshRabbit.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <!-- VIDEO LIBRARY -->
   <video autoplay muted loop id="amazonRainforestVideo">
@@ -109,22 +134,22 @@
         <p>Click each animal to hear their sound and discover their role in the ecosystem!</p>
         <div class = "audio-grid" id = "amazonRainforestButtons">
           <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
-            <img src="img/harpyEagle.png" alt="">
+            <img style = "width: 60px; left: 10px; top:18px" src="img/harpyEagle.png" alt="">
           </button>
           <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
-            <img style = "width: 93px; left: 0px" src="img/sloth.png" alt="">
+            <img style = "width: 83px; left: 0px" src="img/sloth.png" alt="">
           </button>
           <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
-            <img style = "width: 65px; left: 11px; top: 27px;" src="img/anteater.png" alt="">
+            <img style = "width: 60px; left: 11px; top: 27px;" src="img/anteater.png" alt="">
           </button>
           <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
-            <img style = "width: 65px; left: 11px; top: 25px;" src="img/pinkRiverDolphin.png" alt="">
+            <img style = "width: 55px; left: 11px; top: 25px;" src="img/pinkRiverDolphin.png" alt="">
           </button>
           <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
-            <img style = "width: 84px; left: 5px; top: 12px;" src="img/giantRiverOtter.png" alt="">
+            <img style = "width: 74px; left: 6px; top: 12px;" src="img/giantRiverOtter.png" alt="">
           </button>
           <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
-            <img style = "width: 60px; left: 11px; top: 25px;" src="img/greenIguana.png" alt="">
+            <img style = "width: 50px; left: 14px; top: 25px;" src="img/greenIguana.png" alt="">
           </button>
         </div>
         <div class = "audio-grid" id = "africanSerengetiGrasslandButtons">
@@ -148,23 +173,23 @@
           </button>
         </div>
         <div class = "audio-grid" id = "floridaEvergladesButtons">
-          <button onclick="playAudio1('harpyEagle', 'harpyEagleButton')" type="button" id = "harpyEagleButton">
-            <img src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('floridaPanther', 'floridaPantherButton')" type="button" id = "floridaPantherButton">
+            <img src="img/floridaPanther.png" alt="">
           </button>
-          <button onclick="playAudio1('sloth', 'slothButton')" type="button" id = "slothButton">
-            <img style = "width: 93px; left: 0px" src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('americanAlligator', 'americanAlligatorButton')" type="button" id = "americanAlligatorButton">
+            <img style = "width: 55px; left: 12px; top:25px" src="img/americanAlligator.png" alt="">
           </button>
-          <button onclick="playAudio1('anteater', 'anteaterButton')" type="button" id = "anteaterButton">
-            <img style = "width: 65px; left: 11px; top: 27px;" src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('manatee', 'manateeButton')" type="button" id = "manateeButton">
+            <img style = "width: 70px; left: 6px; top: 24px;" src="img/manatee.png" alt="">
           </button>
-          <button onclick="playAudio1('pinkRiverDolphin', 'pinkRiverDolphinButton')" type="button" id = "pinkRiverDolphinButton">
-            <img style = "width: 65px; left: 11px; top: 25px;" src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('woodStork', 'woodStorkButton')" type="button" id = "woodStorkButton">
+            <img style = "width: 55px; left: 13px; top: 15px;" src="img/woodStork.png" alt="">
           </button>
-          <button onclick="playAudio1('giantRiverOtter', 'giantRiverOtterButton')" type="button" id = "giantRiverOtterButton">
-            <img style = "width: 84px; left: 5px; top: 12px;" src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('greatEgret', 'greatEgretButton')" type="button" id = "greatEgretButton">
+            <img style = "width: 60px; left: 12px; top: 17px;" src="img/greatEgret.png" alt="">
           </button>
-          <button onclick="playAudio1('greenIguana', 'greenIguanaButton')" type="button" id = "greenIguanaButton">
-            <img style = "width: 60px; left: 11px; top: 25px;" src="img/harpyEagle.png" alt="">
+          <button onclick="playAudio1('marshRabbit', 'marshRabbitButton')" type="button" id = "marshRabbitButton">
+            <img style = "width: 65px; left: 3px; top: 15px;" src="img/marshRabbit.png" alt="">
           </button>
         </div>
       </div>
@@ -300,6 +325,41 @@
         conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
         info.innerHTML = "Waterbucks are large animals with long hair and a brown-gray coat, primarily located in sub-Saharan Africa. Waterbucks are also excellent swimmers who often enter the water to escape from predators, and herbivores that feed on a variety of grasses. Waterbuck populations have been declining due to poaching and human settlements, as well as heavy metal poisoning in the Lake Nakuru National Park.<br>";
         didYouKnow.innerHTML = "Did you know? Female waterbuck communicate with their calves by bleating or snorting!";
+      }else if(toDisplay == "floridaPanther"){
+        title.innerHTML = "About the Florida Panther";
+        conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
+        info.innerHTML = "Florida Panthers are a type of puma that live in the forests and swamps of South Florida. They are strictly carnivores with 90% of their diet consisting of feral hog, white-tailed deer, raccoon, and armadillo. Today, there are only around 120 to 130 Florida panthers left in the wild, mainly found in the Everglades National Park and Big Cypress National Preserve.<br>";
+        didYouKnow.innerHTML = "Did you know? Florida panthers can leap more than 4 m (15 ft.)!";
+      }
+      else if(toDisplay == "americanAlligator"){
+        title.innerHTML = "About the American Alligator";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "American alligators are reptiles found in freshwater and slow-moving rivers. Their bodies can only tolerate salt water for brief periods of time, as they lack salt glands. American alligators populations reached all-time lows in the 1950s due to hunting and habitat loss, but since then have steadily increased.<br>";
+        didYouKnow.innerHTML = "Did you know? American alligators are the largest reptile in North America!";
+      }
+      else if(toDisplay == "manatee"){
+        title.innerHTML = "About the Manatee";
+        conservationStatus.innerHTML = "Conservation Status: Threatened<br>"
+        info.innerHTML = "Manatees are large marine animals with a rounded head, flippers, and a flat tail. They are the ocean’s largest aquatic herbivores, spending up to 8 hours a day grazing on seagrasses and other aquatic plants. Manatees have been extensively hunted by humans for their meat, fat, and tough hides, causing a drastic decrease in population.<br>";
+        didYouKnow.innerHTML = "Did you know? Manatees are more closely related to the elephant than they are to other marine creatures!";
+      }
+      else if(toDisplay == "woodStork"){
+        title.innerHTML = "About the Wood Stork";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Wood Storks are large, long-legged birds that grow to 45 inches tall with a wingspan of 65 inches. They live in a variety of wetlands and are the only stork species found in North America. Wood Storks are threatened by a loss of feeding habitat and changing water levels caused by levees, canals, and floodgates.<br>";
+        didYouKnow.innerHTML = "Did you know? Wood Storks have been known to fly as high as 6000 feet!";
+      }
+      else if(toDisplay == "greatEgret"){
+        title.innerHTML = "About the Great Egret";
+        conservationStatus.innerHTML = "Conservation Status: Least Concern<br>"
+        info.innerHTML = "Great egrets are tall birds found in shallow North American wetlands, who mainly consume a diet of fish. In the past, white feathers of great egrets were used for the decoration of hats, which led to a decline in their population. However, this practice was banned at the end of the 19th century, leading to a large and stable population of great egrets today.<br>";
+        didYouKnow.innerHTML = "Did you know? Great egrets curve their necks into a “S” shape when flying!";
+      }
+      else if(toDisplay == "marshRabbit"){
+        title.innerHTML = "About the Marsh Rabbit";
+        conservationStatus.innerHTML = "Conservation Status: Endangered<br>"
+        info.innerHTML = "Marsh rabbits are small cottontail rabbits found in the marshes and swamps of coastal regions of the Eastern and Southern United States. They can be identified by their short, rounded ears and dark brown fur. Marsh rabbits were listed as federally endangered in 1990 due to threats of habitat loss and degradation, predation by cats, and mortality from vehicles.<br>";
+        didYouKnow.innerHTML = "Did you know? Marsh rabbits are excellent swimmers that will often dive underwater to escape from predators!";
       }
     }else{
       about.style.display = "none";
