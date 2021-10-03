@@ -203,7 +203,7 @@
         <p id = "did-you-know">Did you know?</p>
       </div>
 
-      <div id = "credit-link"><a target = "_blank" href="https://www.youtube.com/watch?v=-53mGJ4h5sQ">Video Credits: Amazon Rainforest by Scenic Scenes</a></div>
+      <div id = "credit-link"><a id = "credit-info" target = "_blank" href="https://www.youtube.com/watch?v=-53mGJ4h5sQ">Video Credits: Scenic Scenes</a></div>
     </div>
   </div>
 
@@ -408,18 +408,25 @@
     var previousAudio = document.getElementById(currentEcosystem + "Audio");
     var chooseButton = document.getElementById(ecosystem+"Choose")
     var previousChooseButton = document.getElementById(currentEcosystem+"Choose")
+    var credit = document.getElementById("credit-info");
 
     if(ecosystem == "amazonRainforest"){
       title.innerHTML = "Amazon Rainforest 🌳";
       info.innerHTML = "As the world’s largest tropical rainforest, the Amazon Rainforest is located in South America and home to nearly 40,000 plant species, 427 mammals, and over 2.5 million different insects, making the ecosystem incredibly biodiverse. The Amazon Rainforest is vital to our planet by slowing climate change through sequestering carbon from the atmosphere and storing it in its trees.";
+      credit.innerHTML = "Video Credits: Scenic Scenes";
+      credit.href = "https://www.youtube.com/watch?v=-53mGJ4h5sQ";
 
     }else if(ecosystem == "africanSerengetiGrassland"){
       title.innerHTML = "African Serengeti Grassland 🌳";
       info.innerHTML = "The Serengeti is a vast ecosystem in semi-desert grasslands of east-central Africa, grazed by wildlife and livestock. The area contains rich volcanic soils and an arid climate, acting as a feeding ground for over 1500 exotic animals. Every year, over 2 million animals migrate in a clockwise direction across the Serengeti known as the Great Wildebeest Migration.";
+      credit.innerHTML = "Video Credits: Amazing Places on Our Planet";
+      credit.href = "https://www.youtube.com/watch?v=IfxoZ_tiE0g";
     
     }else if(ecosystem == "floridaEverglades"){
       title.innerHTML = "Florida Everglades 🌳";
       info.innerHTML = "The Everglades is one of the world’s most unique ecosystems, consisting of tropical wetlands, sawgrass marshes, and mangrove swamps, spanning over 2 million acres across Florida. This ecosystem remains a crucial habitat to numerous endangered wildlife and provides drinking water for over 8 million Floridians.G";
+      credit.innerHTML = "Video Credits: Amazing Places on Our Planet";
+      credit.href = "https://www.youtube.com/watch?v=in-oYF86gXU";
     }
     previousButtons.style.display = "none";
     buttons.style.display = "grid";
